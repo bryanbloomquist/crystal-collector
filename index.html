@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gem Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container mx-auto">
+        <!-- Main Heading -->
+        <img src="assets/images/logo.PNG">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-white border border-dark p-3">
+                <!-- Instructions/Sidebar -->
+                <p>The Target Score is generated at random.</p>
+                <p>Clicking on a gem will add a specific number of points to your total score.</p>
+                <p>You win the game by matching Player Score to Target Score, you lose the game if Player Score exheeds Target Score.</p>
+                <p>The value of each gem is hidden until you click on it.</p>
+                <p>Each time a new game starts a new value will be given to each gem.</p>
+            </div>
+            <div class="col-md-7 border border-dark">
+                <div class="row">
+                    <div class="col p-3 mx-auto">
+                        <!-- Gem 1 -->
+                        <button class="btn btn-dark p-0">
+                            <img src=" " id="gem1" class="gem" data-gem-value=" ">
+                        </button>
+                    </div>
+                    <div class="col p-3 mx-auto">
+                        <!-- Gem 2 -->
+                        <button class ="btn btn-dark p-0">
+                            <img src=" " id="gem2" class="gem" data-gem-value=" ">
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col p-3 mx-auto">
+                        <!-- Gem 3 -->
+                        <button class="btn btn-dark p-0">
+                            <img src=" " id="gem3" class="gem" data-gem-value=" ">
+                        </button>
+                    </div>
+                    <div class="col p-3 mx-auto">
+                        <!-- Gem 4 -->
+                        <button class="btn btn-dark p-0">
+                            <img src=" " id="gem4" class="gem" data-gem-value=" ">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-white border border-dark">
+                    <!-- Target Score -->
+                    <p>Target Score:</p>
+                    <p id="targetScore">120</p><hr>
+                    <!-- Current Score -->
+                    <p>Player Score:</p>
+                    <p id="playerScore">0</p><hr>
+                    <!-- player wins -->
+                    <p>Player Wins</p>
+                    <p id="playerWins">0</p><hr>
+                    <!-- player losses -->
+                    <p>Player Losses</p>
+                    <p id="playerLosses">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>

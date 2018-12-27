@@ -1,0 +1,8 @@
+body {
+    background-image: url("../images/wall2.png");
+}
+
+.gem {
+    width: 150px;
+    display: block;
+}
