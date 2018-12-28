@@ -1,5 +1,4 @@
-
-//  DEFINE INITIAL VARIABLES FOR THE GAME
+//  Set the initial variables on page load
     var targetScore = 0;
     var playerScore = 0;
     var playerWins = 0;
@@ -12,55 +11,52 @@
     var val4 = valArray[3];
 
 
-
 //  Set the game function
 function game () {
 
-//  Generate Random Number between 19-120 for the Target Score
-    targetScore = Math.floor((Math.random()*102)+19);
-    $("#targetScore").text(targetScore)
-        console.log(targetScore);
+    //  Generate Random Number between 19-120 for the Target Score
+        targetScore = Math.floor((Math.random()*102)+19);
+        $("#targetScore").text(targetScore)
+            console.log(targetScore);
 
-
-
-//  Shuffle valArray to assign unique random number to each random gem
-    function shuffle(array){
-        var currentIndex = array.length, temporaryValue, randomIndex;
-        while (0 !== currentIndex){
-            randomIndex = Math.floor(Math.random()*currentIndex);
-            currentIndex -= 1;
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array [randomIndex];
-            array[randomIndex] = temporaryValue;
+    //  Shuffle valArray to assign unique random number to each random gem
+        function shuffle(array){
+            var currentIndex = array.length, temporaryValue, randomIndex;
+            while (0 !== currentIndex){
+                randomIndex = Math.floor(Math.random()*currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array [randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
         }
-        return array;
-    }
-    valArray = shuffle(valArray);
-    imageArray = shuffle(imageArray);
-    val1 = valArray[0];
-    img1 = imageArray[0];
-    $('#gem1').attr("data-gem-value", val1).attr("src", imageArray[0].image)
-    val2 = valArray[1];
-    $('#gem2').attr("data-gem-value", val2).attr("src", imageArray[1].image)
-    val3 = valArray[2];
-    $('#gem3').attr("data-gem-value", val3).attr("src", imageArray[2].image)
-    val4 = valArray[3];
-    $('#gem4').attr("data-gem-value", val4).attr("src", imageArray[3].image)
-        console.log(valArray);
-        console.log(imageArray);
-        console.log(val1, val2, val3, val4);
+        valArray = shuffle(valArray);
+        imageArray = shuffle(imageArray);
+        val1 = valArray[0];
+        img1 = imageArray[0];
+        $('#gem1').attr("data-gem-value", val1).attr("src", imageArray[0].image)
+        val2 = valArray[1];
+        $('#gem2').attr("data-gem-value", val2).attr("src", imageArray[1].image)
+        val3 = valArray[2];
+        $('#gem3').attr("data-gem-value", val3).attr("src", imageArray[2].image)
+        val4 = valArray[3];
+        $('#gem4').attr("data-gem-value", val4).attr("src", imageArray[3].image)
+            console.log(valArray);
+            console.log(imageArray);
+            console.log(val1, val2, val3, val4);
 }
 
+
+// Set the game reset function
 function reset () {
+    playerScore = 0;
     $("#playerScore").text(0)
     game ();
 }
 
 
-
-
-
-//
+// Set the win/lose conditions
     function gameWin() {
         if (playerScore === targetScore) {
             playerWins += 1;

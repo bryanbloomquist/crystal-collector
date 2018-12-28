@@ -1,5 +1,12 @@
+@font-face {
+    font-family: andyBold;
+    src: url(../fonts/andybold.ttf);
+}
+
 body {
-    background-image: url("../images/wall2.png");
+    background-image: url("../images/wall1.png");
+    cursor: url("../images/pickaxe.png"), default;
+    font-family: andyBold;
 }
 
 .gem {
