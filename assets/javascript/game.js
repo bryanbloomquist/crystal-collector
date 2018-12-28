@@ -11,8 +11,11 @@
     var val4 = valArray[3];
 
 
+
 //  Set the game function
 function game () {
+
+
 
     //  Generate Random Number between 19-120 for the Target Score
         targetScore = Math.floor((Math.random()*102)+19);
@@ -70,18 +73,8 @@ function reset () {
 
 
 
-
-
-//
-
-
-
-
-
-
 // RUN THE GAME
 game ();
-
 
 // Increase playerScore when player selects gem
 $(".gem").click(function() {
@@ -92,3 +85,20 @@ $(".gem").click(function() {
         console.log (playerScore);
     gameWin();
 });
+
+
+// Allows rules to be collapsed
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}

@@ -3,13 +3,126 @@
     src: url(../fonts/andybold.ttf);
 }
 
-body {
-    background-image: url("../images/wall1.png");
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
     cursor: url("../images/pickaxe.png"), default;
+  }
+
+body {
+    background-image: url("../images/wall2.png");
+    width: 400px;
+    margin: 0 auto;
+    font-family: andyBold;
+    font-size: 18px;
+    color: #fff;
+}
+
+.header {
+    position: absolute;top:0;left:0;right:0;height:75px;
+    width: 100%;
+    background-image: url("../images/navbarBG.png");
+
+    z-index: -1;
+}
+
+#logo {
+    width: 100%;
+}
+
+.collapsible {
+    cursor: url("../images/pickaxe.png"), default;
+    background-image: url("../images/wall1.png");
+    padding: 10px;
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
     font-family: andyBold;
 }
 
-.gem {
-    width: 150px;
-    display: block;
+.content {
+    padding-left: 18px;
+    display: none;
+    overflow: hidden;
+    background-image: url("../images/wall1.png");
 }
+
+ul {
+    list-style-type: circle;
+    padding-left: 5px;
+}
+
+li {
+    padding: 5px;
+}
+
+.game-button {
+    background-position: center;
+    background-image: url("../images/wall4.png");
+    margin: 10px;
+    border:0px;
+    outline:0px;
+    padding: 0px;
+}
+
+.gem-mine {
+    background-image: url("../images/wall4.png")
+}
+.gem {
+    width: 175px;
+    float: left;
+    padding: 0;
+}
+
+body:active {
+    cursor: url("../images/pickaxe1.png"), default;
+}
+
+.scoreboard {
+    background-image: url("../images/wall3.png");
+    padding: 10px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+  }
+  
+ @media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    body {width: 600px;}
+    ul {list-style-type: none; padding: 0;}
+    .content {display: block; height: 308px; font-size: 15px; padding: 0px;}
+    .gem {width: 150px;}
+    .header {height:100px;}
+    .scoreboard {height: 348px;}
+
+  }
+  
+@media only screen and (min-width: 768px) {
+    ul {list-style-type: circle; padding: 5px;}
+    body {width: 750px;}
+    .gem {width: 190px;}
+    .header {height: 125px;}
+    .scoreboard {height: 430px;}
+    .content {display: block; height: 390px; padding-left: 18px; font-size: 18px;}
+  }
