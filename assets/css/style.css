@@ -24,7 +24,6 @@ body {
     position: absolute;top:0;left:0;right:0;height:75px;
     width: 100%;
     background-image: url("../images/navbarBG.png");
-
     z-index: -1;
 }
 
@@ -94,7 +93,7 @@ body:active {
 [class*="col-"] {
     width: 100%;
     float: left;
-  }
+}
   
  @media only screen and (min-width: 600px) {
     .col-s-1 {width: 8.33%;}
@@ -115,8 +114,7 @@ body:active {
     .gem {width: 150px;}
     .header {height:100px;}
     .scoreboard {height: 348px;}
-
-  }
+}
   
 @media only screen and (min-width: 768px) {
     ul {list-style-type: circle; padding: 5px;}
@@ -125,4 +123,4 @@ body:active {
     .header {height: 125px;}
     .scoreboard {height: 430px;}
     .content {display: block; height: 390px; padding-left: 18px; font-size: 18px;}
-  }
+}

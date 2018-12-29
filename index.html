@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,10 @@
     <title>Gem Collector</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <audio id="myAudio">
+        <source src="assets/sounds/stoneHit.mp3" type="audio/mp3"></audio>
 </head>
+
 <body>
     <div class="header"></div>
     <div class="container">
@@ -18,59 +22,66 @@
         <div class="row">
             <div class="col-s-3">
                 <button class="collapsible">Game Rules</button>
-                    <!-- Instructions/Sidebar -->
-                    <div class="content">
-                        <ul>
+                <!-- Instructions/Sidebar -->
+                <div class="content">
+                    <ul>
                         <li>The Target Score is generated at random.</li>
                         <li>Clicking on a gem will add a specific number of points to your total score.</li>
                         <li>You win by matching the Target Score</li>
                         <li>You lose the game by exheeding the Target Score.</li>
                         <li>The value of each gem is hidden.</li>
                         <li>A new value will be given to each gem when a new game starts.</li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
-            <div class="col-s-7 gem-mine">
-                <div class="row">
-                        <!-- Gem 1 -->
-                        <button class="game-button">
-                            <img src=" " id="gem1" class="gem" data-gem-value=" ">
-                        </button>
-                        <!-- Gem 2 -->
-                        <button class="game-button">
-                            <img src=" " id="gem2" class="gem" data-gem-value=" ">
-                        </button>
-                </div>
-                <div class="row">
-                        <!-- Gem 3 -->
-                        <button class="game-button">
-                            <img src=" " id="gem3" class="gem" data-gem-value=" ">
-                        </button>
-                        <!-- Gem 4 -->
-                        <button class="game-button">
-                            <img src=" " id="gem4" class="gem" data-gem-value=" ">
-                        </button>
-                </div>
+        </div>
+        <div class="col-s-7 gem-mine" onclick="playAudio()">
+            <div class="row">
+                <!-- Gem 1 -->
+                <button class="game-button">
+                    <img src="#" id="gem1" class="gem" data-gem-value=" " alt="gem 1">
+                </button>
+                <!-- Gem 2 -->
+                <button class="game-button">
+                    <img src="#" id="gem2" class="gem" data-gem-value=" " alt="gem 2">
+                </button>
             </div>
-                <div class="col-s-2 scoreboard">
-                        <!-- Target Score -->
-                        <p>Target Score:</p>
-                        <p id="targetScore">120</p><hr>
-                        <!-- Current Score -->
-                        <p>Player Score:</p>
-                        <p id="playerScore">0</p><hr>
-                        <!-- player wins -->
-                        <p>Player Wins</p>
-                        <p id="playerWins">0</p><hr>
-                        <!-- player losses -->
-                        <p>Player Losses</p>
-                        <p id="playerLosses">0</p>
-                    </div>
-                </div>
+            <div class="row">
+                <!-- Gem 3 -->
+                <button class="game-button">
+                    <img src="#" id="gem3" class="gem" data-gem-value=" " alt="gem 3">
+                </button>
+                <!-- Gem 4 -->
+                <button class="game-button">
+                    <img src="#" id="gem4" class="gem" data-gem-value=" " alt="gem 4">
+                </button>
+            </div>
+        </div>
+        <div class="col-s-2 scoreboard">
+            <!-- Target Score -->
+            <p>Target Score:</p>
+            <p id="targetScore">120</p>
+            <hr>
+            <!-- Current Score -->
+            <p>Player Score:</p>
+            <p id="playerScore">0</p>
+            <hr>
+            <!-- player wins -->
+            <p>Player Wins</p>
+            <p id="playerWins">0</p>
+            <hr>
+            <!-- player losses -->
+            <p>Player Losses</p>
+            <p id="playerLosses">0</p>
         </div>
     </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/javascript/game.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <script>
+        var click = document.getElementById("myAudio");
+        function playAudio() { click.play(); }
+    </script>
 </body>
+
 </html>

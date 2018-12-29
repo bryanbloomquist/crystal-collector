@@ -12,16 +12,16 @@
 
 
 
+$(document).ready(function() {
+
+
+
 //  Set the game function
-function game () {
-
-
-
+    function game () {
     //  Generate Random Number between 19-120 for the Target Score
         targetScore = Math.floor((Math.random()*102)+19);
         $("#targetScore").text(targetScore)
             console.log(targetScore);
-
     //  Shuffle valArray to assign unique random number to each random gem
         function shuffle(array){
             var currentIndex = array.length, temporaryValue, randomIndex;
@@ -48,15 +48,17 @@ function game () {
             console.log(valArray);
             console.log(imageArray);
             console.log(val1, val2, val3, val4);
-}
+    }
+
 
 
 // Set the game reset function
-function reset () {
-    playerScore = 0;
-    $("#playerScore").text(0)
-    game ();
-}
+    function reset () {
+        playerScore = 0;
+        $("#playerScore").text(0)
+        game ();
+    }
+
 
 
 // Set the win/lose conditions
@@ -74,31 +76,38 @@ function reset () {
 
 
 // RUN THE GAME
-game ();
+    game ();
+
+
 
 // Increase playerScore when player selects gem
-$(".gem").click(function() {
-    var gemValue = ($(this).attr("data-gem-value"));
-        console.log(gemValue);
-    playerScore += parseInt(gemValue);
-    $("#playerScore").text(playerScore)
-        console.log (playerScore);
-    gameWin();
-});
+    $(".gem").click(function() {
+        var gemValue = ($(this).attr("data-gem-value"));
+            console.log(gemValue);
+        playerScore += parseInt(gemValue);
+        $("#playerScore").text(playerScore)
+            console.log (playerScore);
+        gameWin();
+    });
 
 
-// Allows rules to be collapsed
-var coll = document.getElementsByClassName("collapsible");
-var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
+// Allows for game rules to be collapsed/expanded
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "block";
+        }
+    });
     }
-  });
-}
+
+
+
+});
