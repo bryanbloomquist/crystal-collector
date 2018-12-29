@@ -9,10 +9,14 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
     cursor: url("../images/pickaxe.png"), default;
-  }
+}
+
+html.help {
+    cursor: url("../images/pickaxe1.png");
+}
 
 body {
-    background-image: url("../images/wall2.png");
+    background-image: url("../images/wall1.png");
     width: 400px;
     margin: 0 auto;
     font-family: andyBold;
@@ -33,7 +37,7 @@ body {
 
 .collapsible {
     cursor: url("../images/pickaxe.png"), default;
-    background-image: url("../images/wall1.png");
+    background-image: url("../images/wall3.png");
     padding: 10px;
     margin: 0px auto;
     display: block;
@@ -50,7 +54,7 @@ body {
     padding-left: 18px;
     display: none;
     overflow: hidden;
-    background-image: url("../images/wall1.png");
+    background-image: url("../images/wall3.png");
 }
 
 ul {
@@ -78,10 +82,6 @@ li {
     width: 175px;
     float: left;
     padding: 0;
-}
-
-body:active {
-    cursor: url("../images/pickaxe1.png"), default;
 }
 
 .scoreboard {
