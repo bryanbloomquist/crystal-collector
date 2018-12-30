@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 
 
-// RUN THE GAME
+// Run the game
     game ();
 
 
@@ -107,12 +107,6 @@ $(document).ready(function() {
         }
     });
     }
-
-
-
-    $("body").on("mousedown mouseup", function() {
-        $("body").toggleClass("help");
-    });
 
 
 
