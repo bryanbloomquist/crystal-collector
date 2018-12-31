@@ -128,6 +128,27 @@ h1 {
     float: left;
 }
 
+/* rescued npc section */
+
+.borderimg4 {
+    border: 15px solid transparent;
+    border-image: url("../images/marble2.png") 25% round;
+}
+
+#npc-farm {
+    clear: both;
+    margin: 0px auto;
+    min-height: 100px;
+    background-image: url("../images/marble1.png")
+}
+
+.npc {
+    height: 70px;
+    padding: 5px;
+    float: left;
+    display: block;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
@@ -149,9 +170,12 @@ h1 {
     .col-12 {width: 100%;}
     body {width: 600px;}
     .gem {width: 135px;}
+    #sidebar {margin-left: 15px}
+    #gem-mine {margin-left: 20px}
 }
   
 @media only screen and (min-width: 768px) {
     body {width: 768px;}
     .gem {width: 185px;}
+    #gem-mine {margin-left: 25px}
 }

@@ -27,18 +27,20 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-4">
+            <!-- Sidebar Container -->
+            <div class="col-4" id="sidebar">
                 <div class="row">
 
                     <!-- Game Rules -->
                     <div class="col" id="rules">
                         <button class="collapsible">Game Rules</button>
                         <div class="content borderimg3">
-                            <p>Clicking on a gem will add a specific number of points to your total score.</p>
+                            <p>Mining a gem will add a specific number of points to your total score.</p>
                             <p>You win by matching the Target Score</p>
-                            <p>You lose the game by exheeding the Target Score.</p>
+                            <p>You lose by going over the Target Score.</p>
                             <p>The value of each gem is hidden.</p>
                             <p>A new value will be given to each gem when a new game starts.</p>
+                            <p>When you win you rescue a town NPC, can you rescue all 26?</p>
                         </div>
                     </div>
     
@@ -92,6 +94,10 @@
 
         </div>
     </div>
+
+    <!-- Rescued NPC's -->
+    <div class="borderimg4" id="npc-farm"></div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
