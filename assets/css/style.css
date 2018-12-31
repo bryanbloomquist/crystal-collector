@@ -67,15 +67,13 @@ p {
 /*Scoreboard*/
 
 #scoreboard {
-    background-image: url("../images/marble1.PNG");
-    display: block;
+    background-image: url("../images/granite1.PNG");
     margin: 5px;
 }
 
 h2 {
     float: left;
     width: 75%;
-    display: block;
     padding: 5px;
     text-shadow: 1px 1px #000;
 }
@@ -100,7 +98,7 @@ h1 {
 .borderimg2 {
     border: 15px solid transparent;
     padding: 10px;
-    border-image: url("../images/marble2.PNG") 25% round;
+    border-image: url("../images/granite2.PNG") 25% round;
 }
 
 /* Game Section */
@@ -125,7 +123,7 @@ h1 {
 }
 
 .gem {
-    width: 150px;
+    width: 160px;
     padding: 0;
     float: left;
 }
