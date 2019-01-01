@@ -6,7 +6,6 @@ var playerLosses = 0;
 var valArray = [1,2,3,4,5,6,7,8,9,10,11,12]
 var imageArray = [{image: "assets/images/amber.PNG"}, {image: "assets/images/amethyst.PNG"}, {image: "assets/images/diamond.PNG"}, {image: "assets/images/emerald.PNG"}, {image: "assets/images/ruby.PNG"}, {image: "assets/images/saphire.PNG"}, {image: "assets/images/topaz.PNG"}]
 var npcArray = [{image:"assets/images/npcguide.png"}, {image:"assets/images/npcmerchant.png"}, {image:"assets/images/npcnurse.png"}, {image:"assets/images/npcdemolitionist.png"}, {image:"assets/images/npcdyetrader.png"}, {image:"assets/images/npcdryad.png"}, {image:"assets/images/npcbarkeep.png"}, {image:"assets/images/npcarmsdealer.png"}, {image:"assets/images/npcstylist.png"}, {image:"assets/images/npcpainter.png"}, {image:"assets/images/npcangler.png"}, {image:"assets/images/npctinkerer.png"}, {image:"assets/images/npcwitchdoctor.png"}, {image:"assets/images/npcclothier.png"}, {image:"assets/images/npcmechanic.png"}, {image:"assets/images/npcpartygirl.png"}, {image:"assets/images/npcwizard.png"}, {image:"assets/images/npctaxcollector.png"}, {image:"assets/images/npctruffle.png"}, {image:"assets/images/npcpirate.png"}, {image:"assets/images/npcsteampunker.png"}, {image:"assets/images/npccyborg.png"}, {image:"assets/images/npcsantaclaus.png"}, {image:"assets/images/npctraveler.png"}, {image:"assets/images/npcoldman.png"}, {image:"assets/images/npcskeleton.png"}]
-// var rescueArray = [{image:"assets/images/npcguide.png"}];
 var val1 = valArray[0];
 var val2 = valArray[1];
 var val3 = valArray[2];
@@ -66,13 +65,17 @@ function reset () {
 
 // Set the win/lose conditions
 function gameWin() {
-    if (playerScore === targetScore) {
+    if (playerScore === targetScore && playerWins < npcArray.length) {
         // add npc to farm on game win
         var npcImage = $("<img>");
         npcImage.addClass("npc");
         npcImage.attr("src", npcArray[playerWins].image);
         $("#npc-farm").append(npcImage);
-
+        playerWins += 1;
+        $("#playerWins").text(playerWins);
+        reset();
+    } else if (playerScore === targetScore && playerWins >= npcArray.length) {
+        // no more npcs to save, just add 1 to win count
         playerWins += 1;
         $("#playerWins").text(playerWins);
         reset();
