@@ -132,14 +132,14 @@ h1 {
 
 .borderimg4 {
     border: 15px solid transparent;
-    border-image: url("../images/marble2.png") 25% round;
+    border-image: url("../images/boreal2.png") 30% round;
 }
 
 #npc-farm {
     clear: both;
     margin: 0px auto;
     min-height: 100px;
-    background-image: url("../images/marble1.png")
+    background-image: url("../images/boreal1.png")
 }
 
 #npc-farm::after {
