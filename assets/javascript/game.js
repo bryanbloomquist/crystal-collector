@@ -15,6 +15,22 @@ var val4 = valArray[3];
 $(document).ready(function() {
 
 
+
+    function grabCursor () {
+        
+    }
+
+    $("html").addClass("touch-mode-grab");
+        $("#gem-mine").on('mousedown', function(e) {
+            e.preventDefault();
+            $("html").removeClass("touch-mode-grab").addClass("touch-mode-grabbing");
+        });
+
+        $("#gem-mine").on('mouseup mouseleave', function(e) {
+            $("html").removeClass("touch-mode-grabbing").addClass("touch-mode-grab");
+        })
+
+
 //  Set the game function
 function game () {
 //  Generate Random Number between 19-120 for the Target Score
@@ -86,6 +102,7 @@ game ();
 
 
 // Increase playerScore when player selects gem
+grabCursor();
 $(".gem").click(function() {
     var gemValue = ($(this).attr("data-gem-value"));
         console.log(gemValue);

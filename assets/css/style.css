@@ -22,6 +22,14 @@ body {
     color: #fff;
 }
 
+html.touch-mode-grab #gem-mine {
+    cursor: url("../images/pickaxe.png"), default;
+}
+
+html.touch-mode-grabbing #gem-mine {
+    cursor: url("../images/pickaxe1.png"), default;
+}
+
 #logo {
     width: 100%;
 }
@@ -106,6 +114,11 @@ h1 {
 #gem-mine {
     background-image: url("../images/stone1.png");
     margin: 5px;
+    cursor: inherit;
+}
+
+#gem-mine * {
+    cursor: inherit;
 }
 
 .borderimg1 {
