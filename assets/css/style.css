@@ -5,7 +5,7 @@
 
 html {
     box-sizing: border-box;
-  }
+}
   *, *:before, *:after {
     box-sizing: inherit;
     cursor: url("../images/pickaxe.png"), default;
@@ -174,8 +174,8 @@ h1 {
     width: 100%;
     float: left;
 }
-  
- @media only screen and (min-width: 600px) {
+
+@media only screen and (min-width: 600px) {
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -193,7 +193,7 @@ h1 {
     #sidebar {margin-left: 15px}
     #gem-mine {margin-left: 20px}
 }
-  
+
 @media only screen and (min-width: 768px) {
     body {width: 768px;}
     .gem {width: 185px;}
