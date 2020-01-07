@@ -1,201 +1,162 @@
 @font-face {
-    font-family: andyBold;
-    src: url(../fonts/andybold.ttf);
+	font-family: andyBold;
+	src: url(../fonts/andybold.ttf);
 }
 
-html {
-    box-sizing: border-box;
-}
   *, *:before, *:after {
-    box-sizing: inherit;
-    cursor: url("../images/pickaxe.png"), default;
+	cursor: url("../images/pickaxe.png"), default;
 }
 
 body {
-    background-image: url("../images/terrariaBackground.png");
-    background-repeat: no-repeat;
-    background-size: default;
-    width: 400px;
-    margin: 0 auto;
-    font-family: andyBold;
-    font-size: 18px;
-    color: #fff;
+	background-image: url("../images/terrariaBackground.png");
+	background-repeat: no-repeat;
+	background-size: default;
+	background-attachment: fixed;
+	font-family: andyBold;
+	color: #fff;
 }
 
 html.touch-mode-grab #gem-mine {
-    cursor: url("../images/pickaxe.png"), default;
+	cursor: url("../images/pickaxe.png"), default;
 }
 
 html.touch-mode-grabbing #gem-mine {
-    cursor: url("../images/pickaxe1.png"), default;
+	cursor: url("../images/pickaxe1.png"), default;
 }
 
 #logo {
-    width: 100%;
-}
-
-p {
-    padding: 5px;
+	width: 100%;
 }
 
 /* Game Rules */
 
 #rules {
-    margin: 5px;
+	background-image: url("../images/livingleaf.PNG");
+	color: #fff;
+	padding: 5px;
+	border: 15px solid transparent; 
+	border-image: url("../images/livingwood.PNG") 25% round;
 }
 
-.collapsible {
-    background-image: url("../images/livingwood.PNG");
-    padding: 10px;
-    margin: 0px auto;
-    display: block;
-    width: 100%;
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 18px;
-    color: #fff;
-    font-family: andyBold;
+#rules p a {
+	width: 100px;
+	color: white;
+	padding: 0 auto;
 }
 
-.content {
-    background-image: url("../images/livingleaf.PNG");
-    display: none;
-    overflow: hidden;
-    text-shadow: 1px 1px #000;
-}
-
-.borderimg3 {
-    border-width: 15px;
-    border-style: none solid solid;
-    border-color: transparent;
-    border-image: url("../images/livingwood.PNG") 25% round;
+#rules ul li {
+  margin-left: 15px;
 }
 
 /*Scoreboard*/
 
 #scoreboard {
-    background-image: url("../images/granite1.PNG");
-    margin: 5px;
+	background-image: url("../images/granite1.PNG");
+	border: 15px solid transparent;
+	padding: 10px;
+	border-image: url("../images/granite2.PNG") 25% round;
+	overflow:auto;
 }
 
-h2 {
-    float: left;
-    width: 75%;
-    padding: 5px;
-    text-shadow: 1px 1px #000;
+#scoreboard h5 {
+	float: left;
+	width: 75%;
+	text-shadow: 1px 1px #000;
 }
 
-h1 {
-    float: left;
-    width: 25%;
-    text-align: right;
-    padding: 5px;
-    font-size: 24px;
-    color: #2d5;
-    text-shadow: 1px 1px #000;
+#scoreboard h4 {
+	float: left;
+	width: 25%;
+	text-align: right;
+	color: #2d5;
+	text-shadow: 1px 1px #fff;
 }
 
-#scoreboard::after {
-    overflow: auto;
-    content: "";
-    clear: both;
-    display: block;
+.introText {
+	text-align: center;
+	padding-top: 20px;
 }
 
-.borderimg2 {
-    border: 15px solid transparent;
-    padding: 10px;
-    border-image: url("../images/granite2.PNG") 25% round;
-}
 
 /* Game Section */
 
 #gem-mine {
-    background-image: url("../images/stone1.png");
-    margin: 5px;
-    cursor: inherit;
+	background-image: url("../images/stone1.png");
+	cursor: inherit;
+	height: 100%;
+	border: 15px solid transparent;
+	border-image: url("../images/stone2.PNG") 25% round;
 }
 
 #gem-mine * {
-    cursor: inherit;
-}
-
-.borderimg1 {
-    border: 15px solid transparent;
-    border-image: url("../images/stone2.PNG") 25% round;
+	cursor: inherit;
 }
 
 .game-button {
-    background-position: center;
-    background-image: url("../images/stone1.png");
-    margin: 10px;
-    border: 0px;
-    outline: 0px;
-    padding: 0px;
+	background-position: center;
+	background-image: url("../images/stone1.png");
+	border: 0px;
+	width: 100%;
+	margin: 15px 0;
 }
 
 .gem {
-    width: 160px;
-    padding: 0;
-    float: left;
+	width: 100%;
+	padding: 0;
 }
 
 /* rescued npc section */
 
-.borderimg4 {
-    border: 15px solid transparent;
-    border-image: url("../images/boreal2.png") 30% round;
-}
-
 #npc-farm {
-    clear: both;
-    margin: 0px auto;
-    min-height: 100px;
-    background-image: url("../images/boreal1.png")
+	clear: both;
+	margin: 0px auto;
+	min-height: 100px;
+	background-image: url("../images/boreal1.png");
+	border: 15px solid transparent;
+	border-image: url("../images/boreal2.png") 30% round;
 }
 
 #npc-farm::after {
-    overflow: auto;
-    content: "";
-    clear: both;
-    display: block;
+	overflow: auto;
+	content: "";
+	clear: both;
+	display: block;
 }
 
 .npc {
-    height: 70px;
-    padding: 5px;
-    float: left;
-    display: block;
+	height: 70px;
+	padding: 5px;
+	float: left;
+	display: block;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-    float: left;
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  margin: 10px;
 }
 
-@media only screen and (min-width: 600px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-    body {width: 600px;}
-    .gem {width: 135px;}
-    #sidebar {margin-left: 15px}
-    #gem-mine {margin-left: 20px}
+footer p {
+  color: #663399;
+  background-color: #222222;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-    body {width: 768px;}
-    .gem {width: 185px;}
-    #gem-mine {margin-left: 25px}
+footer img {
+  width: 100%;
+  border: 1px solid #222222;
+}
+
+footer img:hover {
+  border: 1px solid #663399;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    position: relative;
+  }
 }

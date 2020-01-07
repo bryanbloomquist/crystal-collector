@@ -1,4 +1,3 @@
-//  Set the initial variables on page load
 let targetScore = 0;
 let playerScore = 0;
 let playerWins = 0;
@@ -7,10 +6,7 @@ let valArray = [1,2,3,4,5,6,7,8,9,10,11,12];
 let imageArray = [{image: "assets/images/amber.PNG"}, {image: "assets/images/amethyst.PNG"}, {image: "assets/images/diamond.PNG"}, {image: "assets/images/emerald.PNG"}, {image: "assets/images/ruby.PNG"}, {image: "assets/images/saphire.PNG"}, {image: "assets/images/topaz.PNG"}]
 let npcArray = [{image:"assets/images/npcguide.png"}, {image:"assets/images/npcmerchant.png"}, {image:"assets/images/npcnurse.png"}, {image:"assets/images/npcdemolitionist.png"}, {image:"assets/images/npcdyetrader.png"}, {image:"assets/images/npcdryad.png"}, {image:"assets/images/npcbarkeep.png"}, {image:"assets/images/npcarmsdealer.png"}, {image:"assets/images/npcstylist.png"}, {image:"assets/images/npcpainter.png"}, {image:"assets/images/npcangler.png"}, {image:"assets/images/npctinkerer.png"}, {image:"assets/images/npcwitchdoctor.png"}, {image:"assets/images/npcclothier.png"}, {image:"assets/images/npcmechanic.png"}, {image:"assets/images/npcpartygirl.png"}, {image:"assets/images/npcwizard.png"}, {image:"assets/images/npctaxcollector.png"}, {image:"assets/images/npctruffle.png"}, {image:"assets/images/npcpirate.png"}, {image:"assets/images/npcsteampunker.png"}, {image:"assets/images/npccyborg.png"}, {image:"assets/images/npcsantaclaus.png"}, {image:"assets/images/npctraveler.png"}, {image:"assets/images/npcoldman.png"}, {image:"assets/images/npcskeleton.png"}]
 
-
-
 $(document).ready(function() {
-
 
 	$("html").addClass("touch-mode-grab");
 
@@ -59,6 +55,9 @@ $(document).ready(function() {
 	function gameWin() {
 		if (playerScore === targetScore && playerWins < npcArray.length) {
 			// add npc to farm on game win
+			if (playerWins === 0) {
+				$("#npc-farm").empty();
+			}
 			let npcImage = $("<img>");
 			npcImage.addClass("npc");
 			npcImage.attr("src", npcArray[playerWins].image);
@@ -86,19 +85,19 @@ $(document).ready(function() {
 		gameWin();
 	});
 
-	// Allows for game rules section to be collapsed/expanded
-	var coll = document.getElementsByClassName("collapsible");
-		for ( let i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			let content = this.nextElementSibling;
-			if (content.style.display === "block") {
-				content.style.display = "none";
-			} else {
-				content.style.display = "block";
-			}
-		});
-	}
+	// // Allows for game rules section to be collapsed/expanded
+	// var coll = document.getElementsByClassName("collapsible");
+	// 	for ( let i = 0; i < coll.length; i++) {
+	// 	coll[i].addEventListener("click", function() {
+	// 		this.classList.toggle("active");
+	// 		let content = this.nextElementSibling;
+	// 		if (content.style.display === "block") {
+	// 			content.style.display = "none";
+	// 		} else {
+	// 			content.style.display = "block";
+	// 		}
+	// 	});
+	// }
 
 	// Run the game
 	game ();

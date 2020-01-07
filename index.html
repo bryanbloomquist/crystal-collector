@@ -3,114 +3,121 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Gem Collector</title>
-    
-    <link rel="shortcut icon" href="assets/images/gemicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/gemicon.ico" type="image/x-icon">
+  <title>Gem Collector</title>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="shortcut icon" href="assets/images/gemicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/gemicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
 
 <body>
 
-    <audio id="myAudio"><source src="assets/sounds/stoneHit.mp3" type="audio/mp3"></audio>    
+  <audio id="myAudio">
+    <source src="assets/sounds/stoneHit.mp3" type="audio/mp3">
+  </audio>
 
-    <!-- Header -->
-    <div class="container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
         <img id="logo" src="assets/images/logo.PNG" alt="Gem Collector Logo">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 m-2" id="npc-farm">
+        <h2 class="introText">"Save Us!" --The Townspeople</h2>
+      </div>
     </div>
 
-    <!-- Main Body -->
-    <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-10 col-sm-7 col-lg-4 mb-2" id="gem-mine" onclick="playAudio()">
         <div class="row">
-
-            <!-- Sidebar Container -->
-            <div class="col-4" id="sidebar">
-                <div class="row">
-
-                    <!-- Game Rules -->
-                    <div class="col" id="rules">
-                        <button class="collapsible"><i class="fas fa-bars"></i></button>
-                        <div class="content borderimg3">
-                            <p>GAME RULES</p>
-                            <p>Mining a gem will add a specific number of points to your total score.</p>
-                            <p>You win by matching the Target Score</p>
-                            <p>You lose by going over the Target Score.</p>
-                            <p>The value of each gem is hidden.</p>
-                            <p>A new value will be given to each gem when a new game starts.</p>
-                            <p>When you win you rescue a town NPC, can you rescue all 26?</p>
-                        </div>
-                    </div>
-    
-                </div>
-                <div class="row">
-
-                    <!-- Scoreboard -->
-                    <div class="col borderimg2" id="scoreboard">
-                        <!-- player wins -->
-                        <h2>Player Wins</h2>
-                        <h1 id="playerWins">0</h1>
-                        <!-- player losses -->
-                        <h2>Player Losses</h2>
-                        <h1 id="playerLosses">0</h1>
-                        <!-- Target Score -->
-                        <h2>Target Score:</h2>
-                        <h1 id="targetScore">120</h1>
-                        <!-- Current Score -->
-                        <h2>Player Score:</h2>
-                        <h1 id="playerScore">0</h1>
-                    </div>
-    
-                </div>
-            </div>
-
-            <!-- Game Section -->
-            <div class="col-7 borderimg1" id="gem-mine" onclick="playAudio()">
-                <div class="row">
-
-                    <button class="game-button">
-                        <img src="#" id="gem1" class="gem" data-gem-value=" " alt="gem 1">
-                    </button>
-
-                    <button class="game-button">
-                        <img src="#" id="gem2" class="gem" data-gem-value=" " alt="gem 2">
-                    </button>
-                    
-                </div>
-                <div class="row">
-
-                    <button class="game-button">
-                        <img src="#" id="gem3" class="gem" data-gem-value=" " alt="gem 3">
-                    </button>
-
-                    <button class="game-button">
-                        <img src="#" id="gem4" class="gem" data-gem-value=" " alt="gem 4">
-                    </button>
-
-                </div>
-            </div>
-
+          <div class="col-6">
+            <button class="game-button">
+              <img src="#" id="gem1" class="gem" data-gem-value=" " alt="gem 1">
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="game-button">
+              <img src="#" id="gem2" class="gem" data-gem-value=" " alt="gem 2">
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="game-button">
+              <img src="#" id="gem3" class="gem" data-gem-value=" " alt="gem 3">
+            </button>            
+          </div>
+          <div class="col-6">
+            <button class="game-button">
+              <img src="#" id="gem4" class="gem" data-gem-value=" " alt="gem 4">
+            </button>            
+          </div>
         </div>
+      </div>
+      
+      <div class="col-12 col-sm-5 col-lg-4">
+        <div id="scoreboard" class="mb-2">
+          <h5>Player Score:</h5>
+          <h4 id="playerScore">0</h4>          
+          <h5>Target Score:</h5>
+          <h4 id="targetScore">120</h4>
+          <h5>Player Wins:</h5>
+          <h4 id="playerWins">0</h4>
+          <h5>Player Losses:</h5>
+          <h4 id="playerLosses">0</h4>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4">
+        <div id="rules">
+          <p>
+            <a data-toggle="collapse" href="#collapseRules" role="button" aria-expanded="false" aria-controls="collapseRules">
+              GAME RULES
+            </a>
+          </p>
+          <div class="collapse" id="collapseRules">
+            <ul style="list-style-type:circle;">
+              <li>Mining a gem will add a specific number of points to your total score.</li>
+              <li>You win by matching the Target Score</li>
+              <li>You lose by going over the Target Score.</li>
+              <li>The value of each gem is hidden.</li>
+              <li>A new value will be given to each gem when a new game starts.</li>
+              <li>When you win you rescue a town NPC, can you rescue all 26?</li>  
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+  <footer>
+    <a href="https://bryanbloomquist.com" target="_blank"><img src="./assets/images/logo-color.png" alt="B B Logo" /></a>
+    <p>&copy; 2020</p>
+  </footer>
 
-    <!-- Rescued NPC's -->
-    <div class="borderimg4" id="npc-farm"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+  <script src="assets/javascript/game.js"></script>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/game.js"></script>
-
-    <script>
-        var click = document.getElementById("myAudio");
-        function playAudio() { click.play(); }
-    </script>
+  <script>
+    var click = document.getElementById("myAudio");
+    function playAudio() { click.play(); }
+  </script>
 
 </body>
 
