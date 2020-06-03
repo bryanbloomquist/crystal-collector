@@ -83,7 +83,6 @@ html.touch-mode-grabbing #gem-mine {
 #gem-mine {
 	background-image: url("../images/stone1.png");
 	cursor: inherit;
-	height: 100%;
 	border: 15px solid transparent;
 	border-image: url("../images/stone2.PNG") 25% round;
 }
@@ -97,7 +96,7 @@ html.touch-mode-grabbing #gem-mine {
 	background-image: url("../images/stone1.png");
 	border: 0px;
 	width: 100%;
-	margin: 15px 0;
+	margin: 4px 0;
 }
 
 .gem {

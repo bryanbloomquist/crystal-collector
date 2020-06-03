@@ -43,27 +43,29 @@
 
     <div class="row justify-content-center">
 
-      <div class="col-10 col-sm-7 col-lg-4 mb-2" id="gem-mine" onclick="playAudio()">
-        <div class="row">
-          <div class="col-6">
-            <button class="game-button">
-              <img src="#" id="gem1" class="gem" data-gem-value=" " alt="gem 1">
-            </button>
-          </div>
-          <div class="col-6">
-            <button class="game-button">
-              <img src="#" id="gem2" class="gem" data-gem-value=" " alt="gem 2">
-            </button>
-          </div>
-          <div class="col-6">
-            <button class="game-button">
-              <img src="#" id="gem3" class="gem" data-gem-value=" " alt="gem 3">
-            </button>            
-          </div>
-          <div class="col-6">
-            <button class="game-button">
-              <img src="#" id="gem4" class="gem" data-gem-value=" " alt="gem 4">
-            </button>            
+      <div class="col-12 col-sm-7 col-lg-4 mb-2" onclick="playAudio()">
+        <div id="gem-mine">
+          <div class="row no-gutters">
+            <div class="col-6">
+              <button class="game-button">
+                <img src="#" id="gem1" class="gem" data-gem-value=" " alt="gem 1">
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="game-button">
+                <img src="#" id="gem2" class="gem" data-gem-value=" " alt="gem 2">
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="game-button">
+                <img src="#" id="gem3" class="gem" data-gem-value=" " alt="gem 3">
+              </button>            
+            </div>
+            <div class="col-6">
+              <button class="game-button">
+                <img src="#" id="gem4" class="gem" data-gem-value=" " alt="gem 4">
+              </button>            
+            </div>
           </div>
         </div>
       </div>
@@ -83,21 +85,15 @@
 
       <div class="col-12 col-lg-4">
         <div id="rules">
-          <p>
-            <a data-toggle="collapse" href="#collapseRules" role="button" aria-expanded="false" aria-controls="collapseRules">
-              GAME RULES
-            </a>
-          </p>
-          <div class="collapse" id="collapseRules">
-            <ul style="list-style-type:circle;">
-              <li>Mining a gem will add a specific number of points to your total score.</li>
-              <li>You win by matching the Target Score</li>
-              <li>You lose by going over the Target Score.</li>
-              <li>The value of each gem is hidden.</li>
-              <li>A new value will be given to each gem when a new game starts.</li>
-              <li>When you win you rescue a town NPC, can you rescue all 26?</li>  
-            </ul>
-          </div>
+          <p>GAME RULES</p>
+          <ul style="list-style-type:circle;">
+            <li>Mining a gem will add a specific number of points to your total score.</li>
+            <li>You win by matching the Target Score</li>
+            <li>You lose by going over the Target Score.</li>
+            <li>The value of each gem is hidden.</li>
+            <li>A new value will be given to each gem when a new game starts.</li>
+            <li>When you win you rescue a town NPC, can you rescue all 26?</li>  
+          </ul>
         </div>
       </div>
 
